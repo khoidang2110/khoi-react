@@ -1,9 +1,9 @@
 import React from "react";
 
-import Avatar from "./Avatar";
-import Text from "./Text";
-import UserInfo from "./UserInfo";
-import DateTime from "./DateTime";
+import Avatar from "./Comment/Avatar";
+import Text from "./Comment/Text";
+import UserInfo from "./Comment/UserInfo";
+import DateTime from "./Comment/DateTime";
 function Comment() {
   const comment = {
     date: new Date(),
@@ -20,11 +20,13 @@ function Comment() {
   return (
     <div>
       <Avatar imgLink={comment.author.avatarUrl} />
-      <UserInfo name={comment.author.name} />
+      {/* <UserInfo name={comment.author.name} /> */}
+      <Text text={comment.author.name}/>
       <Text text={comment.text} />
-      <DateTime date={comment.date.toLocaleDateString()} />
+      <Text text={comment.date.toLocaleDateString()}/>
+     {/* <DateTime date={comment.date.toLocaleDateString()} /> */}
     </div>
   );
 }
-
+// get date format " mm/dd/yyyy"
 export default Comment;
