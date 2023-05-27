@@ -4,8 +4,9 @@ function Greeting() {
   const [isLoggedIn, setLogin] = React.useState(true);
 
   const handleLogin =()=> {
-    setLogin(!isLoggedIn)
+    setLogin(prevState => !prevState)
   }
+
   if (isLoggedIn) {
     return (
       <div>
