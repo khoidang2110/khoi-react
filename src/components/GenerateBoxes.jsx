@@ -20,6 +20,8 @@ function GenerateBoxes() {
 
   console.log('test fix bug')
 
+  console.log("hotfix production")
+
   return (
     <div>
       Number of boxes:{" "}
