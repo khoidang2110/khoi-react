@@ -6,24 +6,16 @@ import { generateRandomColor } from '../utils/generateRandomColor'
 function GenerateBoxes() {
   const [num, setNum] = useState(0);
   const [boxs, setBoxs] = useState(null);
-  // const [color,setColor] = useState('')
-
   const res = boxs > 0 ? Array.from(new Array(Number(boxs)), (_, i) => i + 1) : [];
   
   function handleClick() {
     setBoxs(num);
-    // setColor(color=>color=generateColor())
   }
 
   function handleValueChange(e) {
     setNum(e.target.value);
   }
 
-  // function generateColor(){
-  //   const randomColor = Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
-  //   return `#${randomColor}`;
-  // }
-  
   return (
     <div>
       Number of boxes:{" "}
