@@ -16,6 +16,8 @@ function GenerateBoxes() {
     setNum(e.target.value);
   }
 
+  console.log('test branch')
+
   return (
     <div>
       Number of boxes:{" "}
