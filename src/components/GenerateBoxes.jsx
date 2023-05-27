@@ -18,6 +18,8 @@ function GenerateBoxes() {
 
   console.log('test branch')
 
+  console.log('test fix bug')
+
   return (
     <div>
       Number of boxes:{" "}
