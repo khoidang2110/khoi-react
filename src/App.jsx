@@ -10,6 +10,10 @@ import ToDoList from './components/ToDoList'
 import Greeting from './components/Greeting'
 import GenerateBoxes from './components/GenerateBoxes'
 import UpdatingObject from './components/UpdatingObject'
+import HookLifecycle from './components/HookLifecycle'
+import StateHook from './components/StateHook'
+import BoxColor from './components/Boxcolor'
+import AddFunction from './components/AddFunction'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -21,10 +25,15 @@ function App() {
     {/* <InputField/> */}
    {/* <ShowHide/> */}
     {/* <ToDoList/> */}
-    <Greeting  />
+    {/* <Greeting  /> */}
     <GenerateBoxes/>
-    <UpdatingObject/>
-    
+    {/* <UpdatingObject/> */}
+
+    {/* <HookLifecycle/> */}
+
+    {/* <StateHook/> */}
+    <BoxColor/>
+    {/* <AddFunction/> */}
     </>
   )
 }
