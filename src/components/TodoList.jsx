@@ -1,7 +1,8 @@
 import React from "react";
 
 function ToDoList() {
-  const [text, setText] = React.useState("");
+  const [text, setText] = React.useState({id: Math.random(0, 5),
+    note: ''});
   const [list, setList] = React.useState([]);
 
   const handleSubmit = () => {
@@ -22,14 +23,14 @@ function ToDoList() {
     <div>
       <input
         onChange={(e) => setText(e.target.value)}
-        value={text}
+        value={text.note}
         type="text"
       />
       <button onClick={handleSubmit}>Add Todo</button>
       <ul>
         {list.map((a) => (
           <li>
-            {a.text}
+            {a.text.note}
             <button onClick={handleDelete}>delete</button>
           </li>
         ))}

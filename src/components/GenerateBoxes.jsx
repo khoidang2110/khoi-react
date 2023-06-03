@@ -8,14 +8,18 @@ function GenerateBoxes() {
   const [boxs, setBoxs] = useState(null);
   const res = boxs > 0 ? Array.from(new Array(Number(boxs)), (_, i) => i + 1) : [];
   
+
   function handleClick() {
     setBoxs(num);
+ 
   }
 
   function handleValueChange(e) {
     setNum(e.target.value);
   }
-
+function handleClickBox(props){
+console.log(props.currentTarget.id)
+}
   console.log('test branch')
 
   console.log('test fix bug')
@@ -42,6 +46,8 @@ function GenerateBoxes() {
             return (
               <div
                 key={box}
+                id={box} 
+
                 style={{
                   height: 120,
                   width: 140,
@@ -52,8 +58,9 @@ function GenerateBoxes() {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }} 
+                onClick={handleClickBox}
               >
-                <div style={{ color: "white" }}>Box #{box}</div>
+                <div style={{ color: "white" }} >Box #{box}</div>
               </div>
             )
           })}
